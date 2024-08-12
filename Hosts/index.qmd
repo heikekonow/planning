@@ -10,8 +10,8 @@ This is a table with the known participating institutions and teams, including p
 | CN | Earthlab | IAP |  |  |  |  |
 | EU | [DKRZ](https://www.dkrz.de/en) | Stockholm Univ | [Bjorn Stevens](https://mpimet.mpg.de/en/staff/bjorn-stevens) | [Florian Ziemen](https://www.dkrz.de/en/about-en/staff/dr-florian-ziemen) | [Heike Konow](https://mpimet.mpg.de/mitarbeiterinnen/heike-konow) | [nextGEMS](https://nextgems-h2020.eu) |
 | IN (NCMRWF/IITM) | NCMRWF | NCMRWF | Raghav  Mupparthy | TBD | TBD | TBD | MoES / MO Partnership|
-| JP | JAMSTEC | UTokyo | Masaki Satoh | Takashi Arakawa |  |  |
 | SA |  |  | Jessica Steinkopf |  |  |  |
+| JP | JAMSTEC | UTokyo | Masaki Satoh | Takashi Arakawa, Masaki Satoh | Tomoki Ohno, Masaki Satoh |  |
 | UK     | JASMIN     | Univ Oxford | [Pier Luigi Vidale](https://research.reading.ac.uk/meteorology/people/pier-luigi-vidale/)  | [Adrian Hines](https://ncas.ac.uk/people/10594/adrian-hines/)| [Philip Stier](https://www.physics.ox.ac.uk/our-people/stier)| |
 | US-Central (NSF/NCAR)   | NCAR-NWSC | NCAR | Brian Medeiros / Bill Skamarock | TBD | TBD | 
 | US-East (GFDL?) | TBD | TBD | TBD | TBD | TBD |  |
