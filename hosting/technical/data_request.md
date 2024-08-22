@@ -16,7 +16,7 @@ For some models the hydrometeor categories may not map directly onto the specifi
 | upward_air_velocity  | wa | m/s |
 | temperature | ta | K | 
 | relative_humidity | hur | - | 
-| specific_humidity | hur | kg/kg | 
+| specific_humidity | hus | kg/kg | 
 | mass_fraction_of_cloud_liquid_water_in_air | clw | kg/kg | 
 | mass_fraction_of_cloud_ice_in_air | cli | kg/kg | 
 | mass_fraction_of_rain_in_air | qr | kg/kg | 
