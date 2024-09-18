@@ -25,7 +25,6 @@ The [HEALPix grid (Górski et al., 2004)](https://iopscience.iop.org/article/10.
 ## Catalogs
 
 Grouping the datasets in catalogs allows to abstract from file system paths, and eases later dataset updates and migrations. [Intake](https://intake.readthedocs.io/en/latest/) has proven useful here - mind that there are version one and two and that the two versions are not necessarily compatible.
-Intake-ESM is designed for unconsolidated data sets (e.g. hundreds of netCDF files). It is less useful in the context of zarr datasets.
 
-See [easy.gems](https://easy.gems.dkrz.de/Processing/Intake/index.html) for examples of the use of the two catalogs in the context of previous hackathons.
+See [easy.gems](https://easy.gems.dkrz.de/Processing/Intake/index.html) for examples of the use of intake in the context of previous hackathons.
 
