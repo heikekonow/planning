@@ -6,11 +6,11 @@ aliases:
 # Data request
 
 ## Data grid and vertical levels
- The data should be provided on the [HEALPix](https://easy.gems.dkrz.de/Processing/healpix/index.html) grid on zoom level 9 or higher (effective cell size of 13 km).
+ The data should be provided on the [HEALPix](https://easy.gems.dkrz.de/Processing/healpix/index.html) grid on zoom level 9 or higher (effective cell size of 13 km). To ease analysis, please provide all HEALPix levels up to this level.
 
 **3D Output Levels:**
 
-The output should be interpolated to the following 25 vertical levels:
+The output should be interpolated to the following 25 pressure levels:
 
 ```python
 import numpy as np
@@ -63,11 +63,11 @@ In principle any file format that is compatible with standard software could be 
 
 If plain zarr 2 is used, data can be read in many programming languages. For C-based software, a recent libnetcdf will do the trick. The downside of this approach is a lot of small files, which can be problematic on HPC systems, especially with inode quota.
 
-Other possible approaches include the use of [kerchunk](https://fsspec.github.io/kerchunk/) in python for grouping data chunks in (netCDF/HDF5) files into unified datasets, that look like zarr to python. Other programming languages / codes can then still make use of the underlying netCDF files.
+Other possible approaches include the use of [kerchunk](https://fsspec.github.io/kerchunk/) in python for grouping data chunks in (netCDF/HDF5) files into unified datasets that look like zarr to python. Other programming languages / codes can then still make use of the underlying netCDF files.
 
 ## Variables
 
-For some models the hydrometeor categories may not map directly onto the specified output.  In these cases hydrometeor habits can be left out (for instance if snow and cloud ice are not distinguished), or additional information can be added, e.g., for models with hail. In such cases, please try to follow [the CF conventions](https://cfconventions.org/Data/cf-standard-names/current/build/cf-standard-name-table.html), and [open an issue](https://github.com/digital-earths-global-hackathon/planning/issues), so we can amend the table and keep the naming consistent among all teams.
+For some models, the hydrometeor categories may not map directly onto the specified output.  In these cases hydrometeor habits can be left out (for instance if snow and cloud ice are not distinguished), or additional information can be added, e.g., for models with hail. In such cases, please try to follow [the CF conventions](https://cfconventions.org/Data/cf-standard-names/current/build/cf-standard-name-table.html), and [open an issue](https://github.com/digital-earths-global-hackathon/planning/issues), so we can amend the table and keep the naming consistent among all teams.
 
 ### 3D Output Variables, write instantaneous values at 6hr interval
 
