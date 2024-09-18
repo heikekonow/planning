@@ -93,8 +93,8 @@ For some models the hydrometeor categories may not map directly onto the specifi
 |:------------------|------------:|-------:|--------:|
 | atmosphere_mass_content_of_cloud_condensed_water| clwvi  | kg m-2| |
 | atmosphere_mass_content_of_cloud_ice| clivi  | kg m-2| |
-| surface_downward_latent_heat_flux | hfls | W m-2| defined upward in CF Standard |
-| surface_downward_sensible_heat_flux | hfss | W m-2| defined upward in CF Standard |
+| surface_upward_latent_heat_flux | hfls | W m-2| defined downward in paper |
+| surface_upward_sensible_heat_flux | hfss | W m-2| defined downward in paper |
 | toa_outgoing_longwave_flux | rlut | W m-2 | |
 | toa_outgoing_longwave_flux_clear_sky | rlutcs | W m-2| |
 | toa_incoming_longwave_flux | rldt | W m-2 | |
