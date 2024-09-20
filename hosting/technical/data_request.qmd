@@ -3,7 +3,9 @@ aliases:
   - /planning/hosting/technical/data_request.html
 ---
 
-# Data request
+# Draft Data request
+
+This data request still is in a draft stadium. To improve it, please [open an issue](https://github.com/digital-earths-global-hackathon/planning/issues) (and a matching pull request).
 
 ## Data grid and vertical levels
  The data should be provided on the [HEALPix](https://easy.gems.dkrz.de/Processing/healpix/index.html) grid on zoom level 9 or higher (effective cell size of 13 km). To ease analysis, please provide all HEALPix levels up to this level.
