@@ -1,5 +1,7 @@
 ---
 title: Agenda template
+aliases: 
+  - /planning/hosting/logistics/agenda_template.html
 ---
 
 

@@ -1,6 +1,8 @@
 ---
 title: Scientific Scope
 order: 10
+aliases: 
+  - /planning/science/index.html
 ---
 
 # Core Simuations 

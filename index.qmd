@@ -1,5 +1,7 @@
 ---
 title: "Digital Earths – Global Hackathon"
+aliases: 
+  - /planning/index.html
 ---
 
 **May 12-18 2025 -- Beijing, Boulder, Oxford, Sao Paulo, Stockholm, Tokyo**
