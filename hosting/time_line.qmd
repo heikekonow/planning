@@ -1,6 +1,8 @@
 ---
 title: Organization time line
 order: 10
+aliases: 
+  - /planning/hosting/time_line.html
 ---
 *This is an idealized time line until when tasks need to be completed. Tasks could be completed earlier of course.*
 

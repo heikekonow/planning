@@ -1,5 +1,7 @@
 ---
 title: Hosts
+aliases: 
+  - /planning/Hosts/index.html
 ---
 This is a table with the known participating institutions and teams, including people nominated to committees.
 

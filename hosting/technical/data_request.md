@@ -1,3 +1,8 @@
+---
+aliases: 
+  - /planning/hosting/technical/data_request.html
+---
+
 # Data request
 
 ## Data Format
