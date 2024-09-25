@@ -1,6 +1,6 @@
 ---
 aliases: 
-  - /planning/technical/data_request.html
+  - /planning/hosting/technical/data_request.html
 ---
 
 # Data request
