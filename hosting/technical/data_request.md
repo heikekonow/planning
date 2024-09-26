@@ -8,6 +8,7 @@ aliases:
 This data request still is in a draft stadium. To improve it, please [open an issue](https://github.com/digital-earths-global-hackathon/planning/issues) (and a matching pull request).
 
 ## Data grid and vertical levels
+
  The data from global models should be provided on the [HEALPix](https://easy.gems.dkrz.de/Processing/healpix/index.html) grid on zoom level 9 or higher (effective cell size of 13 km). To ease analysis, please provide all HEALPix levels up to this level.
 
  For regional models, we will need further discussion with teams that have a strong experience in intercomparisons of regional models.
@@ -30,34 +31,15 @@ HEALPix grids have `12*4**level` cells, so a level 9 HEALPix grid consists of ro
 For level 9 and all lower levels together, about 4 million floats are needed per 2D slice.
 The totals for storing this data (assuming 4 bytes/float, and 50% compression) are
 
-```{python}
-#| code-fold: true
-
-
-vars_3d = 12
-vars_2d = 30
-interval_3d = 6/24.
-interval_2d = 1/24.
-levels_3d = 25
-
-params = dict ( 
-    max_healpix_level = 9,
-    duration = 365,
-    float_precision = 4,
-    float_compression = .5,
-)
-def compute_volume(var_count, levels, interval, max_healpix_level, duration, float_precision, float_compression):
-    cells = sum (12 * 4** level for level in range (max_healpix_level + 1))
-    return cells * var_count * levels * duration / interval * float_precision * float_compression
-
-volume_3d = compute_volume(var_count=vars_3d, levels=levels_3d, interval=interval_3d, **params)
-volume_2d = compute_volume(var_count=vars_2d, levels=1, interval = interval_2d, **params)
-print (f'3D: {volume_3d/1024**4:.1f}TB\n2D: {volume_2d/1024**4:.1f}TB\ntotal: {(volume_3d+volume_2d)/1024**4:.1f}TB')
+```
+3D: 3.3TB
+2D: 2.0TB
+total: 5.3TB
 ```
 
+See [below](#code-for-computing-the-volume) for the code.
+
 Note that for any additional healpix level, the requirements grow by a factor of 4, so a ~6km resolution dataset (HEALPix level 10) already consumes about 20 TB.
-
-
 
 ## File formats
 In principle any file format that is compatible with standard software could be used. However, zarr has proven very advantageous, as it allows to 
@@ -127,3 +109,26 @@ For some models, the hydrometeor categories may not map directly onto the specif
 |  cloud_area_fraction | clt  | 1 | |
 
 
+## Code for computing the data volume
+
+```python
+vars_3d = 12
+vars_2d = 30
+interval_3d = 6/24.
+interval_2d = 1/24.
+levels_3d = 25
+
+params = dict ( 
+    max_healpix_level = 9,
+    duration = 365,
+    float_precision = 4,
+    float_compression = .5,
+)
+def compute_volume(var_count, levels, interval, max_healpix_level, duration, float_precision, float_compression):
+    cells = sum (12 * 4** level for level in range (max_healpix_level + 1))
+    return cells * var_count * levels * duration / interval * float_precision * float_compression
+
+volume_3d = compute_volume(var_count=vars_3d, levels=levels_3d, interval=interval_3d, **params)
+volume_2d = compute_volume(var_count=vars_2d, levels=1, interval = interval_2d, **params)
+print (f'3D: {volume_3d/1024**4:.1f}TB\n2D: {volume_2d/1024**4:.1f}TB\ntotal: {(volume_3d+volume_2d)/1024**4:.1f}TB')
+```
