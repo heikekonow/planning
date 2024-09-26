@@ -2,9 +2,9 @@ on:
     workflow_dispatch:
     push:
   
-  name: Quarto build
+name: Quarto build
   
-  jobs:
+jobs:
     build:
       runs-on: ubuntu-latest
       permissions:
