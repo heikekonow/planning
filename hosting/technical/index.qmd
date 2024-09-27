@@ -17,7 +17,7 @@ For providing the data at hackathons, a hierarchy of resolutions in space and ti
 
 ## The data request
 
-The [Data request is under development](data_request.qmd), and we are [working on a python script](https://github.com/digital-earths-global-hackathon/tools/pull/1) to verify that a dataset matches the request.
+The [Data request is under development](data_request.md), and we are [working on a python script](https://github.com/digital-earths-global-hackathon/tools/pull/1) to verify that a dataset matches the request.
 
 ## Grids
 The [HEALPix grid (Górski et al., 2004)](https://iopscience.iop.org/article/10.1086/427976/pdf) has proven very useful for providing the data, as it features equal area cells, on isolatitude bands and yields itself naturally to a hierarchy of resolutions. It also features the option of using a cell ordering (*nest*) that represents the hierarchy and thus regions that are close in index space, usually also are close in geographical space. This eases reading only a region of a dataset from disks. See [easy.gems](https://easy.gems.dkrz.de/Processing/healpix/index.html) for more info.

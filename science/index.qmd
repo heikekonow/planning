@@ -22,5 +22,5 @@ The protocol follows Takasuka et al., *Prog. Earth and Planet. Sci.* (2024) [(pr
 
 ##  Output Protocol
 
-See the [Data request under development](../hosting/technical/data_request.qmd) for details. 
+See the [Data request under development](../hosting/technical/data_request.md) for details. 
 
