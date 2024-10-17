@@ -97,13 +97,6 @@ Make a compromise that's okay-ish for everybody by chunking along all dimensions
 * Metadata
 * n-d variables consisting of many numbers
 
-## Zarr is as simple as it gets.
-
-* .json files for the metadata
-* binary files for compressed chunks
-
-As chunks are stored separately, this scales for any size of dataset. We are working with a 500 TB dataset in nextGEMS.
-
 ## netCDF4 / HDF5
 
 * *netCDF4*, a.k.a. HDF5 stores metadata and chunks in one file.
@@ -111,6 +104,13 @@ As chunks are stored separately, this scales for any size of dataset. We are wor
 * Loading the dataset requires opening all files.[^1]
 
 [^1]: There is the option of multi-file netCDF4/HDF5, but I have not seen this in practice.
+
+## Zarr is as simple as it gets.
+
+* .json files for the metadata
+* binary files for (compressed) chunks
+
+As chunks are stored separately, this scales for any size of dataset. We are working with a 500 TB dataset in nextGEMS.
 
 ## Kerchunk + fsspec
 
