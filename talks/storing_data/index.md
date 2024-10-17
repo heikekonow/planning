@@ -95,7 +95,7 @@ Make a compromise that's okay-ish for everybody by chunking along all dimensions
 ## Contents of a dataset
 
 * Metadata
-* n-d variables consisting of many numbers (floats)
+* n-d variables consisting of many numbers
 
 ## Zarr is as simple as it gets.
 
