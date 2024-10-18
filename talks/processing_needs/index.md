@@ -20,7 +20,8 @@ format:
 
 ## Hardware
 
-* a couple of dedicated nodes in a SLURM partition (~32 at DKRZ)
+* a couple of dedicated analysis nodes in a SLURM partition (~32 at DKRZ, 10 above normal)
+* reservations have proven less useful than simply expanding the *interactive* partition
 * limit of **2 nodes per participant** (larger jobs are usually user error)
 
 ## Services
