@@ -19,6 +19,20 @@ format:
       theme: default
 ---
 
+## The basics
+
+* Python functions and classes can be organised in modules
+  ```py
+  import my_module
+
+  my_module.my_function(42)
+  ```
+* Packages allow for a hierarchical structuring of modules
+* The Python Package Index (PyPI) helps you find and install software^[authors need to actively publish their code]
+  ```
+  pip install <package_name>
+  ```
+
 ## The default stack
 
 This talk will not cover the "usual suspects"^[I expect those to be installed]
