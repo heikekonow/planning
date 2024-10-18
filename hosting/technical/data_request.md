@@ -34,8 +34,8 @@ The totals for storing this data (assuming 4 bytes/float, and 50% compression) a
 
 ```
 3D: 4.2TB
-2D: 2.4TB
-total: 6.6TB
+2D: 2.7TB
+total: 6.8TB
 ```
 
 See [below](#code-for-computing-the-volume) for the code.
@@ -108,13 +108,15 @@ For some models, the hydrometeor categories may not map directly onto the specif
 | surface_downward_eastward_stress | tauu | N m-2 | |
 | surface_downward_northward_stress | tauv | N m-2 | | 
 |  cloud_area_fraction | clt  | 1 | |
-
+| liquid_water_content_of_surface_snow | swe | kg m-2| short name invented|
+| snow_area_fraction_viewable_from_above | sncvfa|1 | short name based on snc for surface_snow_area_fraction |
+| soil_liquid_water_content | mrso|kg m-2 | short name invented|
 
 ## Code for computing the data volume
 
 ```python
 vars_3d = 12
-vars_2d = 30
+vars_2d = 33
 interval_3d = 6/24.
 interval_2d = 1/24.
 interval_daily = 1.
