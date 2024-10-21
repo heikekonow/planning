@@ -332,4 +332,4 @@ Output tested on multiple $\mathcal{O}(\textrm{PB})$-scale model runs, 100+ user
 
 * remarkably little issues raised
 * very positive general feedback
-* enabled diagnostics which seemd impossible before
+* enabled diagnostics which seemed impossible before
