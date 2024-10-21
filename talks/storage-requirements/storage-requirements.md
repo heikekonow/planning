@@ -30,13 +30,13 @@ format:
 
 ## Ballpark estimate for level 9 (13km)
 
-| type   | cells / snapshot | snapshots | GB / var [^1] | vars requested | GB total |
-| ------ | ---------------- | --------- | ------------- | -------------- | -------- |
-| 2D     | 3 M              | 365*24    | 52            | 33             | 1650     |
-| 2D[^2] | 3 M              | 365*4     | 13            | 33             | 275      |
-| 3D     | 75 M             | 365*4     | 220           | 12             | 2600     |
+| type   | cells / snap-shot | MB / snap-shot[^1] | snapshots | GB / var | vars  | GB total |
+| ------ | ---------------- | ----------- | --------- | ------------- | -------------- | -------- |
+| 2D     | 3 M              |   6         | 365*24    | 52            | 33             | 1650     |
+| 2D[^2] | 3 M              |   6         | 365*4     | 13            | 33             | 275      |
+| 3D     | 75 M             |   150       | 365*4     | 220           | 12             | 2600     |
 
-[^1]: Assuming 50% compression
+[^1]: Assuming 4-byte floats and 50% compression
 [^2]: For consistent datasets
 
 ## Making things useful
