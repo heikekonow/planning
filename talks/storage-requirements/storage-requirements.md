@@ -22,7 +22,7 @@ format:
 
 # What goes where
 
-* Healpix data for variables requested is duplicated among those centers that have enough space.
+* HEALPix data for variables requested is duplicated among those centers that have enough space.
 * Native grid data stays at the originating center.
 * Bonus variables stay at the originating center.
 
@@ -41,7 +41,7 @@ format:
 
 ## Making things useful
 
-* Adding the full healpix hierarchy adds 30%, and makes the dataset useful.
+* Adding the full HEALPix hierarchy adds 30%, and makes the dataset useful.
 * Add daily means (+25% w.r.t the 6-hourly data)
 * Total size per dataset at 13 km: 6.6TB
 * Doubling the resolution multiplies the storage need by 4.
