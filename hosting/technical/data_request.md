@@ -29,15 +29,25 @@ levels = sorted({1,5,20,150,250,750}.union(tr,lt,ua))
 
 HEALPix grids have `12*4**level` cells, so a level 9 HEALPix grid consists of roughly 3 million cells. It has proven very beneficial for the analysis to also store all lower grid resolutions. This adds approximately 30% to the output volume, and allows prototyping analyses at lower resolution, or generating maps from an amount of data that actually matches the pixels in a plot.
 For level 9 and all lower levels together, about 4 million floats are needed per 2D slice.
+Furthermore, we want the 2D fields on 6-hourly interval as well, and all fields also daily.
 The totals for storing this data (assuming 4 bytes/float, and 50% compression) are
 
 ```
-3D: 3.3TB
-2D: 2.0TB
-total: 5.3TB
+3D: 4.2TB
+2D: 2.7TB
+total: 6.8TB
 ```
 
 See [below](#code-for-computing-the-volume) for the code.
+
+Without the hierarchy, the requirements are:
+
+| type   | cells / snapshot | MB / snap-shot[^1] | snapshots | GB / var | vars  | GB total |
+| ------ | ---------------- | ----------- | --------- | ------------- | -------------- | -------- |
+| 2D     | 3 M              |   6         | 365*24    | 52            | 33             | 1650     |
+| 3D     | 75 M             |   150       | 365*4     | 220           | 12             | 2600     |
+
+[^1]: Assuming 4-byte floats and 50% compression
 
 Note that for any additional healpix level, the requirements grow by a factor of 4, so a ~6km resolution dataset (HEALPix level 10) already consumes about 20 TB.
 
@@ -107,15 +117,18 @@ For some models, the hydrometeor categories may not map directly onto the specif
 | surface_downward_eastward_stress | tauu | N m-2 | |
 | surface_downward_northward_stress | tauv | N m-2 | | 
 |  cloud_area_fraction | clt  | 1 | |
-
+| liquid_water_content_of_surface_snow | swe | kg m-2| short name invented|
+| snow_area_fraction_viewable_from_above | sncvfa|1 | short name based on snc for surface_snow_area_fraction |
+| soil_liquid_water_content | mrso|kg m-2 | short name invented|
 
 ## Code for computing the data volume
 
 ```python
 vars_3d = 12
-vars_2d = 30
+vars_2d = 33
 interval_3d = 6/24.
 interval_2d = 1/24.
+interval_daily = 1.
 levels_3d = 25
 
 params = dict ( 
@@ -128,7 +141,10 @@ def compute_volume(var_count, levels, interval, max_healpix_level, duration, flo
     cells = sum (12 * 4** level for level in range (max_healpix_level + 1))
     return cells * var_count * levels * duration / interval * float_precision * float_compression
 
-volume_3d = compute_volume(var_count=vars_3d, levels=levels_3d, interval=interval_3d, **params)
-volume_2d = compute_volume(var_count=vars_2d, levels=1, interval = interval_2d, **params)
+volume_3d = ( compute_volume(var_count=vars_3d, levels=levels_3d, interval=interval_3d, **params) +
+compute_volume(var_count=vars_3d, levels=levels_3d, interval=interval_daily, **params))
+volume_2d = (compute_volume(var_count=vars_2d, levels=1, interval = interval_2d, **params) + 
+            compute_volume(var_count=vars_2d, levels=1, interval = interval_3d, **params) + 
+            compute_volume(var_count=vars_2d, levels=1, interval = interval_daily, **params))
 print (f'3D: {volume_3d/1024**4:.1f}TB\n2D: {volume_2d/1024**4:.1f}TB\ntotal: {(volume_3d+volume_2d)/1024**4:.1f}TB')
 ```
