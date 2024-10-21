@@ -40,6 +40,15 @@ total: 6.8TB
 
 See [below](#code-for-computing-the-volume) for the code.
 
+Without the hierarchy, the requirements are:
+
+| type   | cells / snapshot | MB / snap-shot[^1] | snapshots | GB / var | vars  | GB total |
+| ------ | ---------------- | ----------- | --------- | ------------- | -------------- | -------- |
+| 2D     | 3 M              |   6         | 365*24    | 52            | 33             | 1650     |
+| 3D     | 75 M             |   150       | 365*4     | 220           | 12             | 2600     |
+
+[^1]: Assuming 4-byte floats and 50% compression
+
 Note that for any additional healpix level, the requirements grow by a factor of 4, so a ~6km resolution dataset (HEALPix level 10) already consumes about 20 TB.
 
 ## File formats
