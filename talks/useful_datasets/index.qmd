@@ -252,7 +252,7 @@ Not necessary for the aforementioned.
 Select ICON model output at all<br/>dropsonde locations during [EUREC4A](https://eurec4a.eu/) field campaign:
 
 ```{.python}
-sonde_pix = healpy.ang2pix(
+sonde_pix = healpix.ang2pix(
     icon.crs.healpix_nside, joanne.flight_lon, joanne.flight_lat,
     lonlat=True, nest=True
 )
