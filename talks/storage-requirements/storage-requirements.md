@@ -22,7 +22,7 @@ format:
 
 # What goes where
 
-* HEALPix data for variables requested is duplicated among those centers that have enough space.
+* HEALPix data for variables requested is duplicated/cached among those centers that have enough space.
 * Native grid data stays at the originating center.
 * Bonus variables stay at the originating center.
 
