@@ -21,32 +21,32 @@ format:
 
 ## The basics
 
-* Python functions and classes can be organised in modules
+* Python functions and classes can be organised in [modules](https://docs.python.org/3/tutorial/modules.html)
   ```py
   import my_module
 
   my_module.my_function(42)
   ```
-* Packages allow for a hierarchical structuring of modules
-* The Python Package Index (PyPI) helps you find and install software^[authors need to actively publish their code]
+* [Packages](https://docs.python.org/3/tutorial/modules.html#packages) allow for a hierarchical structuring of modules
+* The Python Package Index ([PyPI](https://pypi.org)) helps you find and install software^[authors need to actively publish their code]
   ```
   pip install <package_name>
   ```
 
 ## The default stack
 
-This talk will not cover the "usual suspects"^[I expect those to be installed]
+This talk will not cover the "usual suspects"
 
-NumPy, SciPy, matplotlib, cartopy, netcdf4, xarray (+flox), ...
+    NumPy, SciPy, matplotlib, cartopy, netcdf4, xarray (+flox), ...
 
-## [healpix](https://github.com/ntessore/healpix)
+## [healpix](https://github.com/ntessore/healpix) <span style="color: #555">_(not healpy)_</span>
 
 * implements a lean set of routines for working with HEALPix
   ```py
   healpix.nside2npix(9)
   healpix.ang2pix(nside=9, 52, 10, nest=True, lonlat=True)
   ```
-* requires only numpy, and can be installed using pip:
+* requires only NumPy, and can be installed with pip:
   ```
   python -m pip install healpix
   ```
@@ -57,8 +57,8 @@ NumPy, SciPy, matplotlib, cartopy, netcdf4, xarray (+flox), ...
   ```py
   easygems.healpix.healpix_show(ds_daily.tas.sel(time="2024-09-10"))
   ```
-* started as a "bin" for functions used on easy.gems
-* can be installed using pip
+* started as a "bin" for functions used on [easy.gems](http://easy.gems.dkrz.de)
+* can be installed with pip
   ```
   python -m pip install easygems
   ```
@@ -71,8 +71,8 @@ NumPy, SciPy, matplotlib, cartopy, netcdf4, xarray (+flox), ...
   gribscan-build --magician ifs --prefix $PWD *.index
   ```
 * provides the command-line tools `gribscan-index` and `gribscan-build`
-* requires an ecCodes version matching the output data
-* can be installed using pip
+* requires an ecCodes version that matches the output data
+* can be installed with pip _(apart from ecCodes)_
   ```
   python -m pip install gribscan
   ```
