@@ -1,6 +1,7 @@
 ---
 title: "Processing needs"
-author: "Lukas Kluft"
+subtitle: "Lessons learned during previous hackathons"
+author: "Lukas Kluft, Florian Ziemen"
 format:
   revealjs:
     transition: slide
@@ -26,16 +27,22 @@ format:
 
 ## Services
 
-* Jupyterhub (or similar) is usually an appreciated entry point
+* interactive access to the computing resources
+* [JupyterHub](https://jupyter.org/hub) (or similar) is usually an appreciated entry point
 
 ## Python environments
 
 * it's hard (if not impossible) to provide a single environment for all users
-* _Compromise:_ provide a lean python environment with packages available through `mambaforge`
+* _Compromise:_ provide a lean python environment with "common" scientific packages
 * users can install their exotic dependencies on top of that
-* Make sure to use the *forge* version of conda things to avoid license issues.[^1]
 
-[^1]: [prefix.dev blog post](https://prefix.dev/blog/towards_a_vendor_lock_in_free_conda_experience)
+## Our recommendation
+
+* use [micromamba](https://mamba.readthedocs.io/)^[Faster than conda and circumvents [license issues](https://prefix.dev/blog/towards_a_vendor_lock_in_free_conda_experience)] to manage a basic python environment
+* we should maintain a single `environment.yaml` to provide **common** packages
+* users may install more "exotic" packages on their own
+
 ## Data
 
-* test access of data **using the hackathon environment**
+* _state-of-the-art_ compression can help to reduce **both** disk usage and access time ([`zstd`](https://github.com/facebook/zstd), [`lz4`](https://github.com/lz4/lz4))
+* test access to data **using the hackathon environment**
