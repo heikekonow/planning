@@ -1,6 +1,6 @@
 # Simulations
 
-## Planed
+## Planned
 
 |Team | Model | domain and resolution |host team | contact | comments |
 |-----|-------|-----------------------|----------|---------|----------|
