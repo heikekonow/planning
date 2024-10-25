@@ -17,6 +17,8 @@ format:
     center: true
     mermaid:
       theme: default
+aliases: 
+  - /talks/python_packages/index.html
 ---
 
 ## The basics

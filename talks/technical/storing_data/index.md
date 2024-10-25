@@ -17,6 +17,8 @@ format:
     center: true
     mermaid:
       theme: default
+aliases: 
+  - /talks/storing_data/index.html
 ---
 
 # Datasets

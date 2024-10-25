@@ -20,6 +20,8 @@ author:
   - name: Tobias Kölling
   - name: Lukas Kluft
 date: 2024-10-20
+aliases: 
+  - /talks/useful_datasets/index.html
 ---
 
 # analysing <br/> high-resolution model output <br/> can be slow

@@ -17,6 +17,8 @@ format:
     center: true
     mermaid:
       theme: default
+aliases: 
+  - /talks/processing_needs/index.html
 ---
 
 ## Hardware
