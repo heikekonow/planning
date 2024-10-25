@@ -7,7 +7,7 @@ format:
     code-background: true
     logo: /static/logos.png
     footer: "[Talks page](/talks)"
-    theme: [default, ../custom.scss]
+    theme: [default, ../../custom.scss]
     chalkboard:
       buttons: true
     navigation-mode: linear
@@ -20,6 +20,8 @@ author:
   - name: Tobias Kölling
   - name: Lukas Kluft
 date: 2024-10-20
+aliases: 
+  - /talks/useful_datasets/index.html
 ---
 
 # analysing <br/> high-resolution model output <br/> can be slow

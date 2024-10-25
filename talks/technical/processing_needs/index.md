@@ -9,7 +9,7 @@ format:
     code-background: true
     logo: /static/logos.png
     footer: "[Talks page](/talks)"
-    theme: [default, ../custom.scss]
+    theme: [default, ../../custom.scss]
     chalkboard:
       buttons: true
     navigation-mode: linear
@@ -17,6 +17,8 @@ format:
     center: true
     mermaid:
       theme: default
+aliases: 
+  - /talks/processing_needs/index.html
 ---
 
 ## Hardware
