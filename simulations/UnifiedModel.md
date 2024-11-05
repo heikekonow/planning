@@ -8,7 +8,7 @@ Met Office and National Centre for Atmospheric Science
 
 [Unified Model](https://www.metoffice.gov.uk/research/approach/modelling-systems/unified-model/climate-models/hadgem3) with [JULES](https://jules.jchmr.org) land surface model (JULES).
 
-The specific N2560 configuration to be used in the WCRP global hackathon is describre in [Tomassini et al. 2023](https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2022MS003418). This configuration includes specific settings for convective parametrisation suitable for sub-10km simulations.
+The specific N2560 configuration to be used in the WCRP global hackathon is described in [Tomassini et al. 2023](https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2022MS003418). This configuration includes specific settings for convective parametrisation suitable for sub-10km simulations.
 
 As background information, the typical model chain for climate simulations at multiple resolutions is described in this article: [Roberts et al. 2019](https://gmd.copernicus.org/articles/12/4999/2019/). The specific configuration for DYAMOND simulations at 5km is contained in the DYAMOND paper series.
 ## Setups
@@ -26,4 +26,4 @@ As background information, the typical model chain for climate simulations at mu
 
 ## Contact for further inquiries
 
-[P.L. Viale](mailto:p.l.vidale@reading.ac.uk)
+[P.L. Vidale](mailto:p.l.vidale@reading.ac.uk)
