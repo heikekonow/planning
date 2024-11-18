@@ -1,1 +1,1 @@
-Sitemap: https://digital-earths-global-hackathon.github.io/planning/sitemap.xml
+Sitemap: https://heikekonow.github.io/planning/sitemap.xml
